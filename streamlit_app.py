@@ -67,16 +67,20 @@ def get_kpis(start_date, end_date):
 st.subheader("Indicateurs Clés")
 kpi_data = get_kpis(start_date, end_date)
 
-if not kpi_data.empty:
+if not kpi_data.empty and not kpi_data['chiffre_affaires'].isnull().all():
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        st.metric("Ventes Totales", f"{int(kpi_data['total_ventes'].iloc[0])}")
+        st.metric("Ventes Totales", f"{int(kpi_data['total_ventes'].iloc[0])}" if not pd.isna(kpi_data['total_ventes'].iloc[0]) else "N/A")
     with col2:
-        st.metric("Chiffre d'Affaires", f"${kpi_data['chiffre_affaires'].iloc[0]:,.2f}")
+        ca = kpi_data['chiffre_affaires'].iloc[0]
+        st.metric("Chiffre d'Affaires", f"${ca:,.2f}" if pd.notna(ca) else "N/A")
     with col3:
-        st.metric("Clients Uniques", f"{int(kpi_data['clients_uniques'].iloc[0])}")
+        st.metric("Clients Uniques", f"{int(kpi_data['clients_uniques'].iloc[0])}" if not pd.isna(kpi_data['clients_uniques'].iloc[0]) else "N/A")
     with col4:
-        st.metric("Panier Moyen", f"${kpi_data['panier_moyen'].iloc[0]:.2f}")
+        panier = kpi_data['panier_moyen'].iloc[0]
+        st.metric("Panier Moyen", f"${panier:.2f}" if pd.notna(panier) else "N/A")
+else:
+    st.warning("Aucune donnée trouvée pour la période sélectionnée.")
 
 # Graphique des ventes par mois
 def get_sales_by_month(start_date, end_date):
