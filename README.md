@@ -20,8 +20,7 @@ Ce projet est un tableau de bord interactif construit avec Streamlit qui permet 
 
 1. **Cloner le dépôt**
    ```bash
-   git clone [URL_DU_REPO]
-   cd rapports_ventes_sql
+   git clone https://github.com/oumar1958/Suivi-et-analyse-des-performances-commerciales
    ```
 
 2. **Créer un environnement virtuel (recommandé)**
@@ -43,21 +42,6 @@ Ce projet est un tableau de bord interactif construit avec Streamlit qui permet 
 5. **Accéder au tableau de bord**
    Ouvrez votre navigateur à l'adresse : `http://localhost:8501`
 
-## 🛠️ Structure du Projet
-
-```
-rapports_ventes_sql/
-├── data/
-│   └── chinook.db         # Base de données SQLite
-├── config/
-│   ├── settings.py        # Paramètres de l'application
-│   └── logging.conf       # Configuration des logs
-├── src/                   # Code source principal
-│   └── services/          # Logique métier
-├── queries/               # Requêtes SQL
-├── requirements.txt       # Dépendances Python
-└── streamlit_app.py       # Application principale Streamlit
-```
 
 ## 📊 Fonctionnalités Détaillées
 
@@ -81,25 +65,10 @@ rapports_ventes_sql/
 - Base de données Chinook (incluse dans `data/`)
 - Bibliothèques Python (voir `requirements.txt`)
 
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! Voici comment contribuer :
-
-1. Forkez le projet
-2. Créez votre branche de fonctionnalité (`git checkout -b feature/AmazingFeature`)
-3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
-4. Poussez vers la branche (`git push origin feature/AmazingFeature`)
-5. Ouvrez une Pull Request
-
 ## 📄 Licence
 
 Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
-## 🙏 Remerciements
-
-- Base de données Chinook pour les données de démonstration
-- Streamlit pour l'interface utilisateur
-- Plotly pour les visualisations interactives
 
 ## 🏗️ Structure du Projet
 
@@ -149,25 +118,13 @@ rapports_ventes_sql/
 ├── scripts/                # Scripts utilitaires
 └── README.md               # Ce fichier
 ```
-
-## Installation
-1. Cloner le dépôt
-2. Installer SQLite3 ou DB Browser for SQLite
-3. Copier la base de données Chinook dans le dossier `data/`
-
-## Utilisation
-1. Ouvrir la base de données avec un client SQL
-2. Exécuter les requêtes du dossier `queries/` selon vos besoins
-3. Les résultats peuvent être exportés au format CSV ou PDF pour analyse
-
-## Documentation
-Consultez le dossier `docs/` pour :
-- Le schéma de la base de données
-- Le guide d'utilisation
-- Les bonnes pratiques SQL
-
-## Auteur
-[Votre Nom] - [Votre Email]
-
-## Licence
+```
+## 📄 Licence
+```
 Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+```
+## Auteur
+[Oumar Abdramane ALLAWAN] - [oumarallawan7@gmail.com]
+
+```
