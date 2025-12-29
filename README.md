@@ -65,10 +65,6 @@ Ce projet est un tableau de bord interactif construit avec Streamlit qui permet 
 - Base de données Chinook (incluse dans `data/`)
 - Bibliothèques Python (voir `requirements.txt`)
 
-## 📄 Licence
-
-Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
 
 ## 🏗️ Structure du Projet
 
@@ -114,9 +110,6 @@ rapports_ventes_sql/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-```
-├── scripts/                # Scripts utilitaires
-└── README.md               # Ce fichier
 ```
 ```
 ## 📄 Licence
